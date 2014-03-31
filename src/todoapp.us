@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"	ng-app="ToDo">
+<head>
+	<meta charset="UTF-8">
+	<title>todo</title>
+	<link rel="stylesheet" href="<%= css %>">
+	<!--<style>
+	.done{text-decoration: line-through; color:#ccc;}
+	</style>-->
+	
+</head>
+<body>
+	<div ng-controller="todoController">
+		<form name="form" ng-submit="addTodo()">
+			<input type="text" name="newtodo" ng-model="newTodo" required />
+			<button ng-disabled="form.$invalid">Go</button>
+		</form>
+		<button ng-click="clearCompleted()">Clear completed tasks</button>
+		<ul>
+			<li ng-repeat="todo in todos">
+					<input type="checkbox" ng-model="todo.done" />
+					<span ng-class="{'done':todo.done}">{{todo.title}}</span>
+				
+			</li>
+		</ul>
+	</div>
+<script src="angular.js"></script>
+<script src="<%= js %>"></script>
+
+
+</body>
+</html>
