@@ -1,31 +1,26 @@
-/*describe("test", function() {
-  it("should do this or that", function() {
-    expect(true).toBe(true);
-  });
-});*/
+describe("Controller: todoController", function() {
+    var scope, rootScope, $controllerConstructor;
+    
+    beforeEach(module('todo'));
+    
+    beforeEach(inject(function($controller, $rootScope){
+            //rootScope = $rootScope;
+            scope = $rootScope.$new();
+            $controllerConstructor = $controller;
+            
+    }));   
+    it('ensures scope.test is true', function(){
+        var mockTest = true;
+        var ctrl = $controllerConstructor('todoController', {
+                   $scope: scope});
 
-describe("todoController", function() {
-	var $rootScope,
-		$scope,
-		controller;
+        expect(scope.test).toBe(mockTest);
+    });
+    it('ensures scope.todos is title: build a todo app', function(){
+        var mockTodos = [{'title': 'Build a todo app', 'done':false}];
+        var ctrl = $controllerConstructor('todoController', {
+                   $scope: scope});
 
-	beforeEach(function(){
-		module('ToDo');
-	
-	
-		inject(function($injector){
-			$rootScope = $injector.get('$rootScope');
-			$scope = $rootScope.$new();
-			controller = $injector.get('$controller')("todoController", {$scope: $scope});
-		});
-
-	});
-
-	beforeEach(inject(function($controller, $rootScope) {
-		$controller('todoController', {
-			$scope: $rootScope.$new()
-			//$location: $location
-		});
-	}));
+        expect(scope.todos).toBe(mockTodos);
+    });
 });
-

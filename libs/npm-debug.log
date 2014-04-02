@@ -1,0 +1,82 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\node\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular.min.js' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink C:\Program Files (x86)\node\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'angular.min.js', null ]
+7 verbose cache add name=undefined spec="angular.min.js" args=["angular.min.js",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'angular.min.js',
+8 verbose parsed url   path: 'angular.min.js',
+8 verbose parsed url   href: 'angular.min.js' }
+9 silly lockFile 38d494c1-angular-min-js angular.min.js
+10 verbose lock angular.min.js C:\Users\chaz\AppData\Roaming\npm-cache\38d494c1-angular-min-js.lock
+11 verbose chmod C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz 644
+12 verbose tar unpack C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz
+13 silly lockFile bcdc5c6b-37979-0-3510516555979848-package tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\package
+14 verbose lock tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\package C:\Users\chaz\AppData\Roaming\npm-cache\bcdc5c6b-37979-0-3510516555979848-package.lock
+15 silly lockFile ba80a6a8-37979-0-3510516555979848-tmp-tgz tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz
+16 verbose lock tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz C:\Users\chaz\AppData\Roaming\npm-cache\ba80a6a8-37979-0-3510516555979848-tmp-tgz.lock
+17 silly gunzTarPerm modes [ '755', '644' ]
+18 error not a package C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz
+19 silly lockFile bcdc5c6b-37979-0-3510516555979848-package tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\package
+20 silly lockFile bcdc5c6b-37979-0-3510516555979848-package tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\package
+21 silly lockFile ba80a6a8-37979-0-3510516555979848-tmp-tgz tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz
+22 silly lockFile ba80a6a8-37979-0-3510516555979848-tmp-tgz tar://C:\Users\chaz\AppData\Local\Temp\npm-840-kUsjQJJK\1396387237979-0.3510516555979848\tmp.tgz
+23 silly lockFile 38d494c1-angular-min-js angular.min.js
+24 silly lockFile 38d494c1-angular-min-js angular.min.js
+25 verbose addNamed [ 'angular.min.js', '' ]
+26 verbose addNamed [ null, '*' ]
+27 silly lockFile 9336446f-angular-min-js angular.min.js@
+28 verbose lock angular.min.js@ C:\Users\chaz\AppData\Roaming\npm-cache\9336446f-angular-min-js.lock
+29 silly addNameRange { name: 'angular.min.js', range: '*', hasData: false }
+30 verbose url raw angular.min.js
+31 verbose url resolving [ 'https://registry.npmjs.org/', './angular.min.js' ]
+32 verbose url resolved https://registry.npmjs.org/angular.min.js
+33 info trying registry request attempt 1 at 14:20:38
+34 http GET https://registry.npmjs.org/angular.min.js
+35 http 404 https://registry.npmjs.org/angular.min.js
+36 silly registry.get cb [ 404,
+36 silly registry.get   { date: 'Tue, 01 Apr 2014 21:19:40 GMT',
+36 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+36 silly registry.get     'content-type': 'application/json',
+36 silly registry.get     via: '1.1 varnish',
+36 silly registry.get     'cache-control': 'max-age=0',
+36 silly registry.get     'content-length': '52',
+36 silly registry.get     'accept-ranges': 'bytes',
+36 silly registry.get     age: '0',
+36 silly registry.get     'x-served-by': 'cache-v43-ASH, cache-lax1434-LAX',
+36 silly registry.get     'x-cache': 'MISS, MISS',
+36 silly registry.get     'x-cache-hits': '0, 0',
+36 silly registry.get     'x-timer': 'S1396387180.169871569,VS0,VS31,VE127,VE160',
+36 silly registry.get     'keep-alive': 'timeout=10, max=50',
+36 silly registry.get     connection: 'Keep-Alive' } ]
+37 silly lockFile 9336446f-angular-min-js angular.min.js@
+38 silly lockFile 9336446f-angular-min-js angular.min.js@
+39 error 404 'angular.min.js' is not in the npm registry.
+39 error 404 You should bug the author to publish it
+39 error 404 It was specified as a dependency of 'todo-test'
+39 error 404
+39 error 404 Maybe try 'npm search angular min'
+39 error 404
+39 error 404 Note that you can also install from a
+39 error 404 tarball, folder, or http url, or git url.
+40 error System Windows_NT 6.2.9200
+41 error command "C:\\Program Files (x86)\\node\\\\node.exe" "C:\\Program Files (x86)\\node\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular.min.js"
+42 error cwd C:\Users\chaz\Development\todo-test\libs
+43 error node -v v0.10.26
+44 error npm -v 1.4.3
+45 error code E404
+46 verbose exit [ 1, true ]
