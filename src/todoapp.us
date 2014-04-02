@@ -9,7 +9,7 @@
 	<h1>Chaz's todo</h1>
 	<div ng-controller="todoController">
 		<form id="form" ng-submit="addTodo()">
-			<input type="text" name="newtodo" ng-model="newTodo" required />
+			<input type="text" name="newtodo" ng-model="newTodoTitle" required />
 			<button ng-disabled="form.$invalid">Go</button>
 		</form>
 		<button id="clearCompletedButton" ng-click="clearCompleted()">Clear completed tasks</button>

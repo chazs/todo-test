@@ -1,26 +1,55 @@
 describe("Controller: todoController", function() {
-    var scope, rootScope, $controllerConstructor;
+    var scope, rootScope, $controllerConstructor, newTodo, todos;
     
     beforeEach(module('todo'));
     
     beforeEach(inject(function($controller, $rootScope){
-            //rootScope = $rootScope;
             scope = $rootScope.$new();
             $controllerConstructor = $controller;
+            newTodo = scope.newTodo;
             
     }));   
-    it('ensures scope.test is true', function(){
-        var mockTest = true;
+    it('expects addTodo() to bool done value', function(){
+        var mockDone = false;
         var ctrl = $controllerConstructor('todoController', {
                    $scope: scope});
+        scope.todos = ["throwin in a todo"];
 
-        expect(scope.test).toBe(mockTest);
+        scope.addTodo();
+
+        expect(scope.todos[1].done).toBe(mockDone);
     });
-    it('ensures scope.todos is title: build a todo app', function(){
-        var mockTodos = [{'title': 'Build a todo app', 'done':false}];
+    it('ensures addTodo() newTodo is empty string', function(){
+        var mockNewTodo = "title";
         var ctrl = $controllerConstructor('todoController', {
                    $scope: scope});
-
-        expect(scope.todos).toBe(mockTodos);
+        scope.todos = [];
+        scope.newTodoTitle = "title"; 
+        scope.addTodo();
+        expect(scope.todos[0].done).toBe(false);
+        expect(scope.todos[0].title).toBe(mockNewTodo); 
     });
+    it('ensures addTodo() todosPush function works', function(){
+        var ctrl = $controllerConstructor('todoController', {
+                   $scope: scope});
+        var mockPush = scope.addTodo([{
+                    'title': scope.newTodo, 
+                    'done':false
+        }]);
+        expect(scope.addTodo()).toEqual(mockPush);
+    });
+    it('ensures clearCompleted() function works', (function(){
+        var ctrl = $controllerConstructor('todoController', {
+                   $scope: scope});
+        var mockTodos = scope.todos.filter(function(item){
+            return !item.done;
+        });    
+       
+        scope.clearCompleted();
+
+        expect(scope.todos).toEqual(mockTodos);
+
+    }));
 });
+
+//   expect(scope.todos[0].done).toBe(false);

@@ -69,5 +69,5 @@ module.exports = function(grunt){
     grunt.loadTasks('custom-contrib'); 
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default', ['jasmine', 'concat', 'uglify', 'todoapp:tests', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'todoapp:tests', 'jasmine','watch']);
 };

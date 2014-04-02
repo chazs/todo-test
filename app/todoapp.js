@@ -1,10 +1,8 @@
 var TD = angular.module('todo', []);
 
 TD.controller('todoController', function todoController($scope){
-	$scope.todos = [
-		{'title': 'Build a todo app', 'done':false}
-	];
-    $scope.test = true;
+	$scope.todos = [{'title': 'Build a todo app', 'done':false}];
+    
 	$scope.addTodo = function(){
 		$scope.todos.push({'title':$scope.newTodo, 'done':false});
 		$scope.newTodo = "";
